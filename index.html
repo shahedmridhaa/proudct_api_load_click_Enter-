@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ----desyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css"/>
+      <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <!--search field-->
+    <header class="text-center p-4">
+      <div class="labe"><h2>Search your Product</h2></div>
+      <input type="text"placeholder="Type here..."
+      class="input input-bordered input-primary w-full max-w-xs" id="search-field"/>
+    </header>
+
+    <!-- spiner -->
+    <div>
+      <progress class="progress w-100 hidden" id="progressbar"></progress>
+    </div>
+
+    <main>
+      <!-- not match -->
+      <div>
+        <h2 class="text-center hidden" id="not-match">Don't Mached Product Name</h2>
+      </div>
+
+      <!-- menu -->
+      <div class="flex">
+        <div class="flex-none p-5">
+          <ul id="all-menu"
+            class="menu bg-danger text-secondary-content p-2 rounded-box shadow-xl">
+          </ul>
+        </div>
+
+        <!-- products -->
+        <div id="products-container" class="grid grid-cols-3 gap-4"></div>
+      </div>
+    </main>
+
+    <!-- modal -->
+    <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box relative">
+        <label
+          for="my-modal-3"
+          class="btn btn-sm btn-circle absolute right-2 top-2"
+          >✕</label>
+        <div id="modal-body">
+       
+        </div>
+      </div>
+    </div>
+
+    <script src="product.js"></script>
+  </body>
+</html>
